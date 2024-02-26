@@ -1,0 +1,35 @@
+<html>
+  <body LINK="#FFFFFF" TEXT="#000000" VLINK="#999999" ALINK="#00FF00" BGCOLOR="#000000">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <center>
+      <script language="JavaScript">
+        function calc(form) {
+          var h = parseFloat(prompt("Введіть значення h:", 0));
+          var k = parseFloat(prompt("Введіть значення k:", 0));
+          var c = parseFloat(prompt("Введіть значення c:", 0));
+          var r = parseFloat(prompt("Введіть значення r:", 0));
+
+          var w = Math.sqrt(Math.pow(r, 2) + k * Math.log10(c) + Math.pow(Math.tan(h), 2));
+          var z = Math.pow(r, 2) + Math.pow(Math.cos(h), 2) + Math.exp(k) - 1;
+
+          form.result1.value = w;
+          form.result2.value = z;
+        }
+      </script>
+      <form>
+        <table border=3 cellspacing=2 width=350 bgcolor="#ffebcd">
+          <tr align=center>
+            <td rowspan=2><input type=button value=" Обчислити " onclick="calc(this.form)"></td>
+          </tr>
+          <tr align=center>
+            <th align=right>Результат w:</th>
+            <td><input type=text name=result1 size=15></td>
+            <th align=right>Результат z:</th>
+            <td><input type=text name=result2 size=15></td>
+          </tr>
+        </table>
+      </form>
+    </center>
+  </body>
+</html>
+
